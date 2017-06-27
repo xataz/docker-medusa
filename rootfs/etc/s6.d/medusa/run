@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /app/Medusa
+exec /usr/bin/python /app/Medusa/start.py --datadir=/config/Medusa

@@ -1,0 +1,32 @@
+#!/bin/sh
+
+addgroup -g ${GID} medusa && adduser -h /home/medusa -s /bin/sh -D -G medusa -u ${UID} medusa
+
+mkdir -p /config/Medusa
+
+chmod +x /etc/s6.d/medusa/* /etc/s6.d/.s6-svscan/*
+
+if [ ! -f /config/Medusa/config.ini ]
+then
+    echo "Generate default configuration ..."
+
+    echo "[General]
+encryption_version = ${MEDUSA_ENCRYPTION_VERSION}
+web_port = 8080
+web_root = \"${MEDUSA_WEBROOT}\"
+version_notify = 0
+auto_update = 0
+notify_on_update = 0
+launch_browser = 0
+root_dirs = 0|${MEDUSA_TVDIRS}
+ignore_words = \"german,core2hd,dutch,swedish,reenc,MrLss,dubbed\"" > /config/Medusa/config.ini
+
+fi
+
+chown -R medusa:medusa /app /etc/s6.d /config
+
+if [ '$@' == '' ]; then
+    exec su-exec medusa:medusa /bin/s6-svscan /etc/s6.d
+else
+    exec su-exec medusa:medusa "$@"
+fi
