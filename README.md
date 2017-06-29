@@ -1,5 +1,9 @@
 ![Medusa](static/images/medusa-logo.png)
 
+[![Build Status](https://drone.xataz.net/api/badges/xataz/docker-medusa/status.svg)](https://drone.xataz.net/xataz/docker-medusa)
+[![](https://images.microbadger.com/badges/image/xataz/medusa.svg)](https://microbadger.com/images/xataz/medusa "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/xataz/medusa.svg)](https://microbadger.com/images/xataz/medusa "Get your own version badge on microbadger.com")
+
 > This image is build and push with [drone.io](https://github.com/drone/drone), a circle-ci like self-hosted.
 > If you don't trust, you can build yourself.
 
