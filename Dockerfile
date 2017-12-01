@@ -1,11 +1,11 @@
-FROM xataz/alpine:3.6
+FROM xataz/alpine:3.7
 
 LABEL description="medusa based on alpine" \
       tags="latest" \
       maintainer="xataz <https://github.com/xataz>" \
-      build_ver="2017112701"
+      build_ver="2017120201"
 
-ARG MEDIAINFO_VER=0.7.95
+ARG MEDIAINFO_VER=0.7.99
 
 ENV MEDUSA_WEBROOT="/" \
     MEDUSA_ENCRYPTION_VERSION=0 \
