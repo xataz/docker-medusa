@@ -3,8 +3,8 @@ FROM xataz/alpine:3.7
 LABEL description="medusa based on alpine" \
       tags="latest" \
       maintainer="xataz <https://github.com/xataz>" \
-      build_ver="201804220600" \
-      commit="77b20916ab577b82112ebc624f816054788c63f2"
+      build_ver="201805170600" \
+      commit="4b9c599a461dae200a1cdd4d53ede28619c3151f"
 
 ENV MEDUSA_WEBROOT="/" \
     MEDUSA_ENCRYPTION_VERSION=0 \
