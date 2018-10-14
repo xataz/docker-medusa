@@ -19,7 +19,7 @@ auto_update = 0
 notify_on_update = 0
 launch_browser = 0
 root_dirs = 0|${MEDUSA_TVDIRS}
-ignore_words = \"german,core2hd,dutch,swedish,reenc,MrLss,dubbed\"" > /config/Medusa/config.ini
+ignore_words = german, core2hd, dutch, swedish, reenc, MrLss, dubbed" > /config/Medusa/config.ini
 
 fi
 
